@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerMain") %>
+        <%- include("./partials/navbar2") %>
+         
+
+            <div class="card">
+                <div class="card-header">
+                    Edición de autos
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Estas editando el auto: </h5>
+                    <p class="card-text"><%=auto.nombreAuto%></p>
+
+                    <p class="card-text">
+                        <%let imagenR = auto.imagen%>
+                    </p>
+                </div>
+            </div>
+
+            <!-- <form action="/autos/editar/<%=auto.id%>?_method=PUT" method="post"> -->
+            <form action="/autos/editar/<%=auto.id%>" method="post" >
+
+                <div class="input-group">
+                    <input type="text" name="nombreauto" class="input" value="<%=auto.nombreAuto%>">
+                    <label for="" class="placeholder">Referencia</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="modelo" class="input" value="<%=auto.modelo%>">
+                    <label for="" class="placeholder">Modelo</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" name="cilindraje" class="input" value="<%=auto.cilindraje%>">
+                    <label for="" class="placeholder">Cilindraje</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" name="precio" class="input" value="<%=auto.precio%>">
+                    <label for="" class="placeholder">Precio</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" name="descuento" class="input" value="<%=auto.descuento%>">
+                    <label for="" class="placeholder">Descuento</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="color" class="input" value="<%=auto.color%>">
+                    <label for="" class="placeholder">Color</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="resena" class="input" value="<%=auto.textoLargo%>">
+                    <label for="" class="placeholder">Descripción</label>
+                </div>
+
+                <!-- Modificando ***** -->
+
+                <div>
+                    <img width="150" src="/img/<%=auto.imagen%>" alt="">
+                    
+                </div>  
+                <div class="input-group">
+                    <!-- <input type="file" name="imagen" class="input" value="<%=auto.imagen%>" accept="image/*"> -->
+                    <input type="file" name="imagen" class="input" value="<%=imagenR%>" accept="image/*">
+                    <label for="" class="placeholder">Imagen</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="estado" class="input" value="<%=auto.estado%>">
+                    <label for="" class="placeholder">Estado</label>
+                </div>
+                <div class="input-group" class="input" >
+                        <label for="" class="placeholder">Marca</label>
+                        <select name="marca">
+                            <% for (let i = 0; i < marcas.length; i++ ) { %>
+                                <% if(marcas[i].id == auto.marca_id) { %>
+                                <option class="input" value="<%=marcas[i].id%>" selected>
+                                    <%=marcas[i].marca%>
+                                </option>
+                                <% } else { %>
+                                    <option class="input" value="<%=marcas[i].id%>">
+                                        <%=marcas[i].marca%>
+                                    </option>
+                            <% } %>
+                            <% } %>
+                    </select>
+                </div>
+                <button class="clasebutton" type="submit">Guardar Cambios</button>
+            </form>
+            <%- include("./partials/footer") %>
+    </body>
+
+</html>

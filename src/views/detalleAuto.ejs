@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+    <link href="/stylesheets/stylesDetail.css" rel="stylesheet">
+
+    <body class="bodydetalleAuto">
+        <!-- Se modifica para utilizar headerDetalle -(Catalogo 5)     ***   -->
+        <%- include("./partials/headerMain") %>
+        <%- include("./partials/navbar2") %>
+                <div class="ResumenDetallado">
+                    <img src="/img/<%= auto.imagen%>" width="70%" id=productImg>
+                    <div>
+                        <h1>
+                            <%= auto.nombreAuto%>
+                        </h1>
+                        <ul class="sin_decor">
+                            <li class="sin_decor">
+                                Marca: <%= auto.marca.marca%>
+                            </li>
+                            <li class="sin_decor">
+                                Modelo: <%= auto.modelo%>
+                            </li>
+                            <li class="sin_decor">
+                                Cilindraje: <%= auto.cilindraje%>
+                            </li>
+                            <li class="sin_decor">
+                                Color: <%= auto.color%>
+                            </li>
+                            <li class="sin_decor">
+                                Precio: <%= auto.precio%>
+                            </li>
+                            <li class="sin_decor">
+                                Descuento: <%= auto.descuento%>%
+                            </li>
+                            <li class="sin_decor">
+                                Reseña: <%= auto.textoLargo%>
+                            </li>
+                            <li class="sin_decor">
+                                Estado: <%= auto.estado%>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Se eliminan los botones Editar y Borrar -(Catalogo 8) ***-->
+                </div>
+            <%- include("./partials/footer") %>
+    </body>
+</html>

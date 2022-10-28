@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+    <link href="/stylesheets/stylesForm.css" rel="stylesheet">
+    <link
+        href="https://static.vecteezy.com/system/resources/thumbnails/000/831/138/small_2x/black-with-pink-edge-overlapping-layers-background.jpg"
+        rel="stylesheet">
+    <style>
+        .imagen-img {
+            max-width: 50vw;
+            max-height: 25vh;
+            color: white
+        }
+    </style>
+
+    <body>
+        <%- include("./partials/headerMain") %>
+            <%- include("./partials/navbar2") %>
+                <div class="fondo">
+                    <div class="container-form sign-in">
+                        <!-- Se agrega accion para direccionar a una vista donde tenga las 
+                    actividades de usuarios y de Autos     -(login y Register 3) *?????*  -->
+                        <form class="formulario1">
+                            <div class="container" style="margin-top: 10px;">
+                                <div class="row">
+                                    <div class="col-md-3" style="color: white;">
+                                        <h2>Hola <%= user.firstName %>! </h2>
+                                        <div class="alert alert-success" style="width: 200px;">
+                                            <p>Gracias por visitar Vencar</p>
+                                            <%= user.email %>
+                                        </div>
+                                        <div></div>
+                                        <img src="../img/users/<%= user.imagen %>" class="imagen-img">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="create-account">Menu Actividades</h2>
+                                <div class="welcome-back">
+                                    <div class="message">
+                                        <a href="/users" class="btn btn-primary" type="button">
+                                            Actividades con usuarios
+                                        </a>
+                                        <br>
+                                    </div>
+                                    <div class="message">
+                                        <a href="/autos" class="btn btn-primary" type="button">
+                                            Actividades con autos
+                                        </a>
+                                    </div>
+                                    <div class="message">
+                                        <a class="nav-link btn btn-primary" type="button"
+                                            href="/users/logout">Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <%- include("./partials/footer") %>
+    </body>
+
+</html>

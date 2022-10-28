@@ -1,0 +1,266 @@
+ /* *{
+    margin: 0;
+    padding: 0px;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+} */
+
+
+.bodydetalleAuto{
+ margin: 0%;
+}
+
+.sin_decor{
+    list-style: none;
+}
+
+.ResumenDetallado{
+    display: flex;
+    margin-top: 1%;
+}
+
+.fondo1{
+   height: 60vh; 
+   background-size: cover;
+   background: no-repeat center;
+
+}
+/* header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.title{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* p{
+    margin-bottom: 40px;
+    font-size: 15px;
+} */
+
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin:30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+    
+}
+
+.btn:hover{
+    background: none;
+    
+}
+
+.btn-home{
+    display: flex;
+   
+}
+.btn-home a {
+    margin: 0 10px;
+}
+
+.content{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+} 
+
+.sau{
+    padding: 30px;
+}
+.h2{
+    align-items: center;
+ 
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem; 
+  
+}
+.imagen-port{
+    object-fit: cover;
+    margin: 2rem;
+    display: block;
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+
+}
+.imagen-port2{
+    object-fit: cover;
+    margin: 2rem;
+    display: block;
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+}
+
+
+.imagen-port3{
+    object-fit: cover;
+    margin: 2rem;
+    display: block;
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+}
+.imagen-port4{
+    object-fit: cover;
+    margin: 2rem;
+    display: block;
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+}
+.imagen-port5{
+    object-fit: cover;
+    margin: 2rem;
+    display: block;
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+} 
+
+
+.text {
+    padding-left: 25px;
+}
+
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #7c1e24;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+        
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+
+main section article:hover .description{
+    display: block;
+}
+.btn-1{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin:30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.btn-2{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin:30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+}

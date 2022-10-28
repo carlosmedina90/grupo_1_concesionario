@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+    <body>
+        <%- include("./partials/headerMain") %>
+        <%- include("./partials/navbar2") %>
+            <h1>Listado de usuarios</h1>
+            <div class="container">
+                <a href="/users/register" class="btn btn-primary" type="button">Crear nuevo Usuario</a>
+                <table class="table table-light">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Primer Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>email</th>
+                            <th>Imagen</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i=0; i < users.length ; i++) { %>
+                            <tr>
+                                <td>
+                                    <%=users[i].id%>
+                                </td>
+                                <td>
+                                    <%=users[i].firstName%>
+                                </td>
+                                <td>
+                                    <%=users[i].lastName%>
+                                </td>
+                                    
+                                <td>
+                                    <%=users[i].email%>
+                                </td>
+                                <td> <img class="img-thumbnail" width="100" src="img/users/<%=users[i].imagen%>" alt="">
+                                </td>
+                                <td>
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        
+                                        <form class="form-inline" method="post" action="/users/editar/<%=users[i].id%>">
+                                            <button class="btn btn-warning" type="submit"> Editar</button>
+                                        </form>
+                                    </div>
+                                    |
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <form class="form-inline" method="post" action="/users/borrar/<%=users[i].id%>">
+                                            <button class="btn btn-danger" type="submit"> Borrar </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <%- include("./partials/footer") %>
+
+
+    </body>
+
+</html>
