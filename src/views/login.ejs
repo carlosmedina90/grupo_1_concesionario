@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+<link href="/stylesheets/stylesForm.css" rel="stylesheet">
+
+    <body>
+        <%- include("./partials/headerMain") %>
+        
+        <%- include("./partials/navbar2") %>
+        <div class="fondo">
+            <div class="container-form sign-in" style="font-size: 20px;">
+                <!-- Se agrega accion para direccionar a una vista donde tenga las 
+                actividades de usuarios y de Autos     -(login y Register 3) *?????*  -->
+                <form class="formulario" action="/users/login" method="post" >
+                    <h2 class="create-account">Iniciar Sesion</h2>
+                    <div class="iconos">
+                        <div class="border-icon">
+                            <i class='bx bxl-instagram'></i>
+                        </div>
+                        <div class="border-icon">
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                        <div class="border-icon">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </div>
+                    </div>
+                    <div class="letraclara">
+                        <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+                        <!-- Se agrega focus para posicionar y id para leer  IEventos 2 -->
+                        <input type="email" name="email"  title="El email debe ser un correo valido " id="email" autofocus
+                            placeholder="Email" required>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
+                            <!-- Se agrega id para leer evento 3 -->
+                        <input input type="password" name="password" placeholder="Contraseña" id="clave" class="btn fondosBlanncos " required>
+                        
+                        <div class="btn-home">
+                            <button class="clasebutton" type="submit" value="Iniciar Sesion">Iniciar Seccion</button>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remember_user"><br>
+                                Recordar mi usuario
+                            </label>
+                        </div>
+                    </div>
+                
+                </form>
+                <div class="welcome-back">
+                    <div class="message">
+                        <h1>Bienvenido de nuevo</h1>
+                        <h4>Si aun no tienes una cuenta por favor registrese aqui</h4>
+                        <button class="sign-in-btn"><a href="/users/register" style="color:white">Registrate</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <%- include("./partials/footer") %>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>

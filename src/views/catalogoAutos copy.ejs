@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("./partials/head") %>
+    <link href="/stylesheets/StyleCatalogo.css" rel="stylesheet">
+
+
+    <body class="catalogobody">
+
+        <%- include("./partials/headerMain") %>
+        <%- include("./partials/navbar2") %>
+
+
+            <!-- <div class="mybuttom-paddding">
+                <a class="mybutton" href="/bots/proposalbot/bot/">Cotizacion al instante</a>
+
+            </div> -->
+            <main class="articulocatalogo">
+                <div class="card">
+                    <div class="card-header">
+                        Nuestro Catalogo
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nuestro Catalogo</h5>
+                        <p class="card-text">Content</p>
+                    </div>
+                </div>
+                <section class="contenedor">
+                    <% autos.forEach(autos=> { %>
+                        <div class="hijos">
+                            <article>
+                                <h4 class="tituloReferencia">
+                                    <%=autos.nombreAuto%>
+                                </h4>
+                                <img src="/img/<%=autos.imagen%>" alt="">
+                                <div class="main-article">
+                                    <i class="fa-solid fa-car-side"></i>
+                                    <p class="price">Precio:
+                                        <%=autos.precio%>
+                                    </p>
+                                    <p class="price">Descuento:
+                                        <%=autos.descuento%>
+                                    </p>
+                                    <p class="Modelo">Modelo:
+                                        <%=autos.modelo%>
+                                    </p>
+                                    <br>
+                                    <p class="Modelo"> Cilindraje:
+                                        <%=autos.cilindraje%>
+                                    </div>
+                                    <b-p>Siéntete vivo. Pura Adrenalina. 100%.</b-p>
+                                <div class="btn-home">
+                                    <!-- Se modifica para que no direccione a Autos -(Catalogo 4)     ***   -->
+                                    <a href="/catalogo/<%=autos.id%>" class="btn-1" class="btn fondosBlanncos ">Conoce
+                                        más</a>
+                                    <!--  <a href="#" class="btn fondosBlanncos ">Agregar Al Carrito</a> -->
+                                </div>
+                            </article>
+                        </div>
+                        <% }) %>
+                </section>
+            </main>
+            <section>
+                <h2 class="title">Marcas</h2>
+                <div class="box-container">
+                    <div class="imagen-port">
+                        <img src="/img/MARCA1.jpg" alt="MARCA1">
+                        <p>Lorem,ipsum dolor sit amet consectetur adipisicing elit </p>
+                    </div>
+                    <div class="imagen-port2">
+                        <img src="/img/MARCA2.jpg" alt="MARCA2">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                    <div class="imagen-port3">
+                        <img src="/img/MARCA3.jpg" alt="MARCA3">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                    <div class="/imagen-port4">
+                        <img src="/img/MARCA4.png" alt="MARCA4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                    <div class="/imagen-port5">
+                        <img src="/img/MARCA5.jpg" alt="MARCA5">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                </div>
+            </section>
+            </main>
+            <%- include("./partials/footer") %>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            
+    </body>
+
+</html>

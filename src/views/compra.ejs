@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerMain") %>
+            <%- include("./partials/navbar2") %>
+                <h1>Compra Procesada</h1>
+
+                <ul class="navbar-nav align-items-center">
+                    <% if (locals.isLogged) { %>
+
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../img/users/<%= locals.userLogged.imagen %>" alt="Card image cap">
+                        <div class="card-body">
+                        <p class="card-text"><%= locals.userLogged.firstName %> <%= locals.userLogged.lastName %></p>
+                        </div>
+                        </div>
+                        <h1><%= locals.userLogged.firstName %> Gracias por tu compra</h1>
+                        <h2 style="text-align:center ;">Toda la información relacionada con su compra sera enviada al correo: <%= locals.userLogged.email %> </h2>
+                        
+                        
+                    <% } else { %>
+
+                        
+                        <p>Gracias por su compra, por favor ingrese su correo donde recibira inforamcion de su compra</p>
+
+                        <nav class="navbar navbar-light bg-light">
+                            <form class="form-inline">
+                              <button class="btn btn-light" type="submit">Email</button>
+                              <input class="form-control mr-sm-2" type="email" placeholder="ejemplo@ejemplo.com" aria-label="email">
+                              <button class="btn btn-light" type="submit">Celular</button>
+                              <input class="form-control mr-sm-2" type="tel" placeholder="##########" aria-label="tel>
+                            </form>
+                          </nav>
+                                            <% } %>
+
+                <script src="/js/front_app.js"></script>
+                <script src="bootstrap.bundle.min.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <body>
+        <%- include("./partials/headerMain") %>
+            <%- include("./partials/navbar2") %>
+                <h1 class="ordenBody">Ingresar Auto</h1>
+
+                <div class="container">
+
+                    <form action="/autos/crear" method="POST" enctype="multipart/form-data">
+
+                        <div class="input-group">
+                            <input type="text" name="nombreauto" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Referencia</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="modelo" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Modelo</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" name="cilindraje" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Cilindraje</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" name="precio" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Precio</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" name="descuento" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Descuento</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="color" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Color</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="resena" class="input" placeholder=" ">
+                            <label for="" class="placeholder">Descripción</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="my-input" class="input" type="file" name="imagen" accept="image/*">
+                            <label class="placeholder" for="my-input">Imagen</label>
+                        </div>
+                        <div class="input-group">
+                            <label for="" class="placeholder">Estado</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="estado" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">A la venta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="estado" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Vendido</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <select name="marca">
+                                <% for (let i=0; i < marcas.length; i++ ) { %>
+                                    <label for="">Marca</label>
+                                    <option class="input" placeholder=" " value="<%=marcas[i].id%>">
+                                        <%=marcas[i].marca%>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div>
+
+
+
+
+                        <button class="clasebutton" type="submit">Guardar</button>
+                    </form>
+                </div>
+                <%- include("./partials/footer") %>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                        crossorigin="anonymous"></script>
+    </body>
+
+</html>

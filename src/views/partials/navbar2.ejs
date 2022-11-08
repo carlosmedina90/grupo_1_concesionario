@@ -1,0 +1,44 @@
+<style>
+.navbar2{
+    margin-bottom:1px
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar2">
+	<div class="container">
+		<a class="navbar-brand" href="#" style="font-size: 30px;" >Imagina lo inimaginable</a> 
+	
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id="mainNavbar">
+			<ul class="navbar-nav me-auto"  style="font-size: 20px;">
+				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">-</a></li>
+				<li class="nav-item"><a class="nav-link" href="/catalogo">Catalogo de vehiculos</a></li>
+				<li class="nav-item"><a class="nav-link" href="/indexCarrito">Carrito</a></li>
+			</ul>
+			<ul class="navbar-nav align-items-center" style="font-size: 20px;">
+				<% if (locals.isLogged) { %>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="../img/users/<%= locals.userLogged.imagen %>" width="40" style="border-radius: 100%;">
+							Hola <%= locals.userLogged.firstName %> 							
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/users/opciones">Mis Opciones</a>
+							<li><hr class="dropdown-divider"></li>
+							<a class="dropdown-item" href="/users/logout">Cerrar Sección</a>
+						</ul>
+					</li>
+				<% } else { %>
+					<li class="nav-item"><a class="nav-link" href="/users/register">Register</a></li>
+					<li class="nav-item"><a class="nav-link" href="/users/login">Login</a></li>
+				<% } %>
+			
+			</ul>
+		</div>
+	</div>
+</nav>
+

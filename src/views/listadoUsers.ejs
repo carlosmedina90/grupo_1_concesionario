@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerMain") %>
+            <%- include("./partials/navbar2") %>
+                <div class="fondo">
+                    <div style="color: white">
+                    <h1>Listado de usuarios</h1>
+                </div>
+
+                    <div class="container">
+                        <a href="/users/register" class="btn btn-primary" type="button">Crear nuevo Usuario</a>
+                        <table class="table table-light">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Primer Nombre</th>
+                                    <th>Segundo Nombre</th>
+                                    <th>email</th>
+                                    <th>Imagen</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (let i=0; i < users.length ; i++) { %>
+                                    <tr>
+                                        <td>
+                                            <%=users[i].id%>
+                                        </td>
+                                        <td>
+                                            <%=users[i].firstName%>
+                                        </td>
+                                        <td>
+                                            <%=users[i].lastName%>
+                                        </td>
+
+                                        <td>
+                                            <%=users[i].email%>
+                                        </td>
+                                        <td> <img class="img-thumbnail" width="100" src="img/users/<%=users[i].imagen%>"
+                                                alt="">
+                                        </td>
+                                        <td>
+                                            <div class="btn-group-vertical" role="group"
+                                                aria-label="Vertical button group">
+
+                                                <form class="form-inline" method="post"
+                                                    action="/users/editar/<%=users[i].id%>">
+                                                    <button class="btn btn-warning" type="submit"> Editar</button>
+                                                </form>
+                                            </div>
+                                            |
+                                            <div class="btn-group-vertical" role="group"
+                                                aria-label="Vertical button group">
+                                                <form class="form-inline" method="post"
+                                                    action="/users/borrar/<%=users[i].id%>">
+                                                    <button class="btn btn-danger" type="submit"> Borrar </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <%- include("./partials/footer") %>
+                        <script src="/js/front_app.js"></script>
+                        <script src="bootstrap.bundle.min.js"></script>
+                        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                            crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                            crossorigin="anonymous"></script>
+                </div>
+
+    </body>
+
+</html>

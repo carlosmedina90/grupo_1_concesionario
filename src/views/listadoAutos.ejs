@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerMain") %>
+            <%- include("./partials/navbar2") %>
+                <div class="fondo">
+                    <div style="color: white">
+                        <h1>Listado de autos</h1>
+                    </div>
+                    <div class="container">
+                        <a href="/autos/crear" class="btn btn-primary" type="button">Crear nuevo auto</a>
+                        <table class="table table-light">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Referencia</th>
+                                    <th>Precio</th>
+                                    <th>Cilindraje</th>
+                                    <th>Imagen</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (let i=0; i < autos.length ; i++) { %>
+                                    <tr>
+                                        <td>
+                                            <%=autos[i].id%>
+                                        </td>
+                                        <td><a href="/autos/<%=autos[i].id%>">
+                                                <%=autos[i].nombreAuto%>
+                                            </a></td>
+
+                                        <td>$ <%=autos[i].precio%>
+                                        </td>
+                                        <td>
+                                            <%=autos[i].cilindraje%>
+                                        </td>
+                                        <td> <img class="img-thumbnail" width="100" src="img/<%=autos[i].imagen%>"
+                                                alt="">
+                                        </td>
+                                        <td>
+                                            <div class="btn-group-vertical" role="group"
+                                                aria-label="Vertical button group">
+                                                <form class="form-inline" method="post"
+                                                    action="/autos/editar/<%=autos[i].id%>">
+                                                    <button class="btn btn-warning" type="submit"> Editar</button>
+                                                </form>
+                                            </div>
+                                            <div class="btn-group-vertical" role="group"
+                                                aria-label="Vertical button group">
+                                                <form class="form-inline" method="post"
+                                                    action="/autos/borrar/<%=autos[i].id%>">
+                                                    <button class="btn btn-danger" type="submit"> Borrar </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <%- include("./partials/footer") %>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                            crossorigin="anonymous"></script>
+
+                </div>
+    </body>
+
+</html>
