@@ -4,6 +4,7 @@
 
 } */
 
+<<<<<<< HEAD
 .modal-contenedor{
   display:flex;
   align-items: center;
@@ -36,6 +37,8 @@
 }
 
 
+=======
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 
 .ordenBody {
 
@@ -43,7 +46,11 @@
 
 }
 .fondo {
+<<<<<<< HEAD
    height: 70vh; 
+=======
+  height: 100vh;
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
   background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/831/138/small_2x/black-with-pink-edge-overlapping-layers-background.jpg");
   /* display: flex;
   align-items: center;
@@ -732,7 +739,11 @@
   }
 
   article{
+<<<<<<< HEAD
     background: #ffff;
+=======
+    background: #0865cf23;
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
   }
 
   header {

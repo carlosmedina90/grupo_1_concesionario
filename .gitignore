@@ -23,6 +23,11 @@
 # Logs and databases #
 ######################
 *.log
+<<<<<<< HEAD
+=======
+*.sql
+*.sqlite
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 
 # OS generated files #
 ######################
@@ -43,6 +48,10 @@ Thumbs.db
 node_modules/
 .vscode/
 
+<<<<<<< HEAD
 views2/
 
 node_modules
+=======
+views2/
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9

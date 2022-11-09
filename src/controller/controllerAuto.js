@@ -1,6 +1,11 @@
 
 let db = require("../database/models");
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 let controllerAuto = {
 
     crear: function (req, res) {
@@ -32,7 +37,14 @@ let controllerAuto = {
                 res.render("listadoAutos", { autos: autos })
             })
     },
+<<<<<<< HEAD
     // Se eliminar Catalogo - (Catalogo - Borrar 2) ***
+=======
+
+    // Se eliminar Catalogo - (Catalogo - Borrar 2) ***
+
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
     detalle: function (req, res) {
         db.Auto.findByPk(req.params.id, {
             include: [{ association: "marca" }]
@@ -41,6 +53,10 @@ let controllerAuto = {
                 res.render("detalleAuto", { auto: auto });
             })
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
     
     editar: function (req, res) {
         let pedidoAuto = db.Auto.findByPk(req.params.id);
@@ -53,10 +69,18 @@ let controllerAuto = {
     actualizar: function (req, res) {
  // Si hay imagen nueva se graba por el SI y si no por el NO
         // Ladifirenencia por no se omite grabar la imagen
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
         if(req.body.imagen!="") {
             // let fecha = Date.now();
             // let fileUpdate = req.body.imagen
             // let nuevaimagen = fecha+"-"+ fileUpdate
+<<<<<<< HEAD
+=======
+           
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
             db.Auto.update({
                 nombreAuto: req.body.nombreauto,
                 modelo: req.body.modelo,
@@ -99,6 +123,10 @@ let controllerAuto = {
             res.redirect("/autos/editar/" + req.params.id)
         }
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 },
     borrar: function (req, res) {
         db.Auto.destroy({
@@ -119,6 +147,10 @@ let controllerAuto = {
     },
     index: (req, res) => {
         // Do the magic
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
         res.render("index",)
     },
 }

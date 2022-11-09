@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("./partials/head") %>
+<<<<<<< HEAD
 
     <body>
         <%- include("./partials/headerMain") %>
@@ -77,6 +78,64 @@
                             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
                             crossorigin="anonymous"></script>
                 </div>
+=======
+    <body>
+        <%- include("./partials/headerMain") %>
+        <%- include("./partials/navbar2") %>
+            <h1>Listado de usuarios</h1>
+            <div class="container">
+                <a href="/users/register" class="btn btn-primary" type="button">Crear nuevo Usuario</a>
+                <table class="table table-light">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Primer Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>email</th>
+                            <th>Imagen</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i=0; i < users.length ; i++) { %>
+                            <tr>
+                                <td>
+                                    <%=users[i].id%>
+                                </td>
+                                <td>
+                                    <%=users[i].firstName%>
+                                </td>
+                                <td>
+                                    <%=users[i].lastName%>
+                                </td>
+                                    
+                                <td>
+                                    <%=users[i].email%>
+                                </td>
+                                <td> <img class="img-thumbnail" width="100" src="img/users/<%=users[i].imagen%>" alt="">
+                                </td>
+                                <td>
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        
+                                        <form class="form-inline" method="post" action="/users/editar/<%=users[i].id%>">
+                                            <button class="btn btn-warning" type="submit"> Editar</button>
+                                        </form>
+                                    </div>
+                                    |
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <form class="form-inline" method="post" action="/users/borrar/<%=users[i].id%>">
+                                            <button class="btn btn-danger" type="submit"> Borrar </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <%- include("./partials/footer") %>
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 
     </body>
 

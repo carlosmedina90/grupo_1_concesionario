@@ -102,6 +102,19 @@ let controllerUsers = {
         return res.redirect('/');
     },
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
     listado: function (req, res) {
         db.Users.findAll()
             .then(function (users) {
@@ -144,7 +157,10 @@ let controllerUsers = {
     },
     borrar: function (req, res) {
         db.Users.destroy({
+<<<<<<< HEAD
             
+=======
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
             where: {
                 id: req.params.id
             }

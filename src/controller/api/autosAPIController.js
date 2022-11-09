@@ -34,6 +34,7 @@ const autosAPIController = {
                 res.render("error",{error})
         }
     },
+<<<<<<< HEAD
     'DetalleAuto': (req, res) => {
         try{
             console.log(req.params.id)
@@ -53,6 +54,8 @@ const autosAPIController = {
                 res.render("error",{error})
         }
     },
+=======
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
     
     /*
     'detail': (req, res) => {

@@ -12,8 +12,13 @@
 }
 
 img{
+<<<<<<< HEAD
     max-width: 30vw;
     max-height: 30vh;
+=======
+    max-width: 40vw;
+    max-height: 40vh;
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 }
 
 
@@ -25,7 +30,10 @@ img{
 }
 
 .tituloReferencia{
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
     color:#fff;
     background: #200122;
     /* fallback for old browsers */
@@ -55,6 +63,7 @@ img{
     font-size: 15px;
 } */
 
+<<<<<<< HEAD
 /*  .btn {
     display: inline-block;
     color: #fff;
@@ -70,6 +79,28 @@ img{
     background: none;
     color: #200122;
     font-style: initial;
+=======
+.btn {
+    display: inline-block;
+   /*  background: #ff523b; */
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+    background: #200122;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.btn:hover {
+    background: none;
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 }
 
 .fondosBlanncos:hover{

@@ -2,7 +2,11 @@
 
 // const e = require("express");
 
+<<<<<<< HEAD
 /* window.onload = function(){
+=======
+window.onload = function(){
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 
     let errores = 0
 
@@ -32,7 +36,11 @@
             inputClave.classList.remove('es-invalido');
             inputClave.classList.add('es-valido');
         }   
+<<<<<<< HEAD
     }); */
+=======
+    });
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 
     /*
     if (errores!=0){
@@ -46,5 +54,10 @@
 
 
 
+<<<<<<< HEAD
 /* 
 } */
+=======
+
+}
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9

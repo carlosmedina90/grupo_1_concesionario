@@ -154,7 +154,10 @@ p {
 }
 
 .box-container .box p {
+<<<<<<< HEAD
     
+=======
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
     padding: 0 15px;
     font-size: 16px;
 }

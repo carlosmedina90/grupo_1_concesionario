@@ -10,7 +10,11 @@ router.get('/', autosAPIController.list);
 
 
 //Detalle de una película
+<<<<<<< HEAD
  router.get('/:id', autosAPIController.DetalleAuto);
+=======
+// router.get('/:id', moviesAPIController.detail);
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 //Filtrar películas por rating. Puede colocar desde 1 hasta 10
 // router.get('/recomended/:rating', moviesAPIController.recomended);
 //Agregar una película

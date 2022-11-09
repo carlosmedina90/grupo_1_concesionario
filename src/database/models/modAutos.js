@@ -46,6 +46,11 @@ module.exports = function (sequelize, dataTypes) {
         },
         estado: {
             type: dataTypes.BIGINT(45),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
         }
 
     }

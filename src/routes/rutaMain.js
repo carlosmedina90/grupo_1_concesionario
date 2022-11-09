@@ -9,9 +9,12 @@ let controllerMain = require("../controller/controllerMain")
 //LECTURA
 router.get("/", controllerMain.index)
 
+<<<<<<< HEAD
 router.get("/indexCarrito", controllerMain.indexCarrito)
 router.get("/compra", controllerMain.compra)
 
+=======
+>>>>>>> ce7e3e3b8b7569e27dbd2b50bc6158a4754626e9
 // Se trae de Autos y debe eliminarse allá -(Catalogo 2) ***
 router.get("/catalogo", controllerMain.catalogo)    
 router.get("/catalogo/:id", controllerMain.catalogoDetalle)
